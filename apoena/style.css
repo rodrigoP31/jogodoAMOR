@@ -1,0 +1,64 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background-image: url('img/logof.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  h1 {
+    font-size: 40px;
+    color: #FF69B4;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .botoes {
+    display: flex;
+    gap: 40px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #sim {
+    background-color: #FF69B4;
+    color: white;
+  }
+  
+  #sim:hover {
+    background-color: #FF1493;
+  }
+  
+  #nao {
+    background-color: #FF6347;
+    color: white;
+    position: relative;
+  }
+  
+  #nao:hover {
+    background-color: #FF4500;
+  }
+  
+  #mensagem {
+    margin-top: 40px;
+    font-size: 24px;
+    color: #FF69B4;
+    display: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  }
+  

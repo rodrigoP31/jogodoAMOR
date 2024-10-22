@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/apoe1.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>HAHA</title>
+</head>
+  <h1>QUER NAMORAR COMIGO?</h1>
+  <div class="botoes">
+    <button id="sim">SIM</button>
+    <button id="nao">NÃO</button>
+  </div>
+  <p id="mensagem">Agora não tem mais escapatória!</p>
+
+  <script>
+    const botaoNao = document.getElementById('nao');
+    const botaoSim = document.getElementById('sim');
+    const mensagem = document.getElementById('mensagem');
+
+    botaoNao.addEventListener('mouseover', () => {
+      const larguraMax = window.innerWidth - botaoNao.offsetWidth;
+      const alturaMax = window.innerHeight - botaoNao.offsetHeight;
+      
+      const novaPosicaoX = Math.random() * larguraMax;
+      const novaPosicaoY = Math.random() * alturaMax;
+
+      botaoNao.style.position = 'absolute';
+      botaoNao.style.left = `${novaPosicaoX}px`;
+      botaoNao.style.top = `${novaPosicaoY}px`;
+    });
+
+    botaoSim.addEventListener('click', () => {
+      mensagem.style.display = 'block';
+      mensagem.textContent = 'Eu sabia que você diria SIM!';
+
+      // Após 3 segundos, redireciona para o link do YouTube
+      setTimeout(() => {
+        window.location.href = "https://www.youtube.com/watch?v=TEapCdfADlw";
+      }, 3000); // 3000 ms = 3 segundos
+    });
+
+    botaoNao.addEventListener('click', () => {
+      mensagem.style.display = 'block';
+      mensagem.textContent = 'Ah, que pena!';
+    });
+  </script>
+
+</body>
+</html>
